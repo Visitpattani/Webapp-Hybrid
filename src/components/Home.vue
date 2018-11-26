@@ -1,8 +1,10 @@
 <template>
   <v-content>
     <v-container>
-      <h1> Welcome </h1>
-      <h4>{{user.email}}</h4>
+      <img id="logo" src="@/assets/overview.png"/>
+      <h1 class="hidden-sm-and-down">แอปพลิเคชั่นอ่านการ์ตูนอันดับ 1 ของคนไทย</h1>
+      <h5 class="hidden-md-and-up center">แอปพลิเคชั่นอ่านการ์ตูน</h5>
+      <h5 class="hidden-md-and-up center">อันดับ 1ของคนไทย</h5>
     </v-container>
   </v-content>
 </template>

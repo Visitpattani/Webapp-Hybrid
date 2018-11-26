@@ -6,6 +6,7 @@ import Weather from '@/components/Weather'
 import Home from '@/components/Home'
 import GoogleMap from '@/components/GoogleMap'
 import Cartoon from '@/components/Cartoon'
+import Cartoon_test from '@/components/Cartoon_test'
 
 import Login from '@/components/Login'
 import SignUp from "@/components/SignUp";
@@ -25,7 +26,7 @@ let router = new Router({
       redirect: '/login'
     },
     {
-      path: '/hello',
+      path: '/contact',
       name: 'HelloWorld',
       component: HelloWorld,
       meta: {
@@ -60,6 +61,14 @@ let router = new Router({
       path: '/cartoon',
       name: 'Cartoon',
       component: Cartoon,
+      meta: {
+        requireAuth: true
+      }
+    },
+    {
+      path: '/cartoon_test',
+      name: 'Cartoon',
+      component: Cartoon_test,
       meta: {
         requireAuth: true
       }

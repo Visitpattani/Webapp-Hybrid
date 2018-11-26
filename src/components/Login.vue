@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="row">
-            <div class="col s2 m4"></div>
-            <div class="col s8 m4 login">
-                <div class="card z-depth-2" style="padding: 40px;">
-                    <h3>Login</h3>
+            <div class="col s2 m2 l3"></div>
+            <div class="col s12 m8 l6 login">
+                <div class="card z-depth-1" style="padding: 50px;">
+                    <h3 class="center">Login</h3>
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="col m8">
@@ -13,13 +13,13 @@
                         </div>
                         <div class="col m2"></div>
                         <div class="col s12 m12 center" style="margin-top: 20px">
-                            <a class="button is-rounded blue lighten-3 wave-light wave-effect btn-large" v-on:click="login">submit</a>
+                            <a class="button is-rounded blue lighten-3 wave-light wave-effect" v-on:click="login">login</a>
                         </div>                    
                     </div>
-                    <p>You don't have an account ? You can create one <router-link to="/sign-up">create one</router-link></p>
+                    <p class="center">You don't have an account ? You can create one <router-link to="/sign-up">create one</router-link></p>
                 </div>
             </div>
-            <div class="col m4">
+            <div class="col m3">
 
             </div>
         </div>
@@ -54,9 +54,8 @@
 </script>
 <style scoped>
     .login {
-        margin-top: 40px;
         background-color: white;
-        margin-top: 30vh;
+        margin-top: 10vh
     }
     input {
         margin: 10px 0;

@@ -1,20 +1,38 @@
 <template>
   <v-app>
     <v-toolbar app dark >
-        <v-toolbar-title class="headline text-uppercase">
-          <span>Cartoon</span>
-        </v-toolbar-title >
+      
+      <img id="logo" src="@/assets/LOGO.png"/>
       <v-spacer></v-spacer>
+      
+      
+      <v-toolbar-items class="hidden-sm-and-down">
         <v-btn href="/#/home" small ma0 flat>
           <span>Home</span>
         </v-btn>
         <v-btn href="/#/cartoon" small ma0 flat>
           <span>Cartoon</span>
         </v-btn>
-        <v-btn href="/#/hello" small ma0 flat>
+        <v-btn href="/#/contact" small ma0 flat>
           <span>Contact us</span>
         </v-btn>
-        <v-icon href="#" v-on:click="logout">exit_to_app</v-icon>
+        <v-icon style="margin-left:20px" href="wave-light" v-on:click="logout">exit_to_app</v-icon>
+      </v-toolbar-items>
+      <v-menu>
+        <v-toolbar-side-icon class="hidden-md-and-up" slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-tile
+            v-for="item in items"
+            :key="item"
+            @click=""
+            :to="item.link"
+          >
+            <v-list-tile-title v-text="item.text"></v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+        <v-list><v-icon style="margin-left:20px" href="wave-light" v-on:click="logout">exit_to_app</v-icon></v-list>
+      </v-menu>
+      
     </v-toolbar>
     <v-content>
       <router-view />
@@ -34,7 +52,9 @@ export default {
   data () {
     return {
       items: [
-      'Home', 'Cartoon', 'Contact', 'Sign Out'
+        { text: 'Home', link: '/home'},
+        { text: 'Cartoon', link: '/cartoon'},
+        { text: 'Contact', link: '/contact'},
       ]
     }
   },
@@ -47,3 +67,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#logo {
+  width: 180px;
+  padding-top: 7px;
+}
+</style>
